@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <EnableNETAnalyzers>True</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Nullable>enable</Nullable>
+    <PackageProjectUrl>https://github.com/madskristensen/Miniblog.Core</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>blog</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/madskristensen/Miniblog.Core.git</RepositoryUrl>
+    <TargetFramework>net10.0</TargetFramework>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.ImageOptimizer" />
+    <PackageReference Include="JavaScriptEngineSwitcher.Core" />
+    <PackageReference Include="JavaScriptEngineSwitcher.Extensions.MsDependencyInjection" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8" />
+    <PackageReference Include="LigerShark.WebOptimizer.Core" />
+    <PackageReference Include="LigerShark.WebOptimizer.Sass" />
+    <PackageReference Include="Microsoft.ClearScript.V8.Native.win-x64" />
+    <PackageReference Include="Microsoft.SyndicationFeed.ReaderWriter" />
+    <PackageReference Include="WebEssentials.AspNetCore.CdnTagHelpers" />
+    <PackageReference Include="WebEssentials.AspNetCore.PWA" />
+    <PackageReference Include="WebEssentials.AspNetCore.StaticFilesWithCache" />
+    <PackageReference Include="WebMarkupMin.AspNetCoreLatest" />
+    <PackageReference Include="WilderMinds.MetaWeblog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="System.Diagnostics.CodeAnalysis" />
+  </ItemGroup>
+</Project>
